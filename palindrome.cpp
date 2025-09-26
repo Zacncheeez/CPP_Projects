@@ -1,4 +1,7 @@
 /*
+9/26/25
+Zach Tobin
+
 This code is designed to test wether a line of text is a palindrome or not. The code
 strips the text of punctuation, spaces, and capitals, and if the text is exactly the
 same written backwords as forwards it prints that it is a palindrome.
@@ -16,17 +19,18 @@ Citations:
 
 using namespace std;
 
+
 int main() {
     cout << "What is the text?: " << endl;
-    char myText[100];
-    cin.getline(myText, 100);
+    char myText[80];
+    cin.getline(myText, 80);
     
-    char cleanText[100];
+    char cleanText[80];
     int j = 0;
     int count = 0;
     
     for (int i = 0; i < strlen(myText); i++) {
-        // From Google AI. Converts each character to lowercase
+        // From Google AI. Converts each character to lowercase, remove spaces, and remove punctuation.
         char ch = static_cast<char>(tolower(static_cast<unsigned char>(myText[i])));
         
         if (isspace(static_cast<unsigned char>(ch)) || ispunct(static_cast<unsigned char>(ch))) {
@@ -39,7 +43,7 @@ int main() {
     
     cleanText[j] = '\0';
 
-    char reversed[100];
+    char reversed[80];
     strcpy(reversed, cleanText);
     reverse(reversed, reversed + strlen(reversed));
 
