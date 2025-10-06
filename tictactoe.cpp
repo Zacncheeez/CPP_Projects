@@ -45,14 +45,7 @@ int main() {
  
   
 
-  /*
-    for (i = 0; rowChoice < 3; rowChoice++) {
-        for (j = 0; columnChoice < 3; columnChoice++) {
-            cout << "\ns[" << rowChoice << "][" << columnChoice << "]=  ";
-            cin >> arr[rowChoice][columnChoice];
-        }
-    }
-  */
+
   
     cout << "\nThe 2-D Array is:\n";
     for (i = 0; i < 3; i++) {
