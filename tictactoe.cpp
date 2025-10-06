@@ -21,39 +21,39 @@ using namespace std;
 int main() {
   cout << "Lets play TicTacToe" << endl;
 
-  char arr[3][3] = {
-    {'.', '.', '.'},
-    {'.', '.', '.'},
-    {'.', '.', '.'}
+  char arr[4][4] = {
+    {'0', '1', '2', '3'},
+    {'1', '.', '.', '.'},
+    {'2', '.', '.', '.'},
+    {'3', '.', '.', '.'}
   };
   
   char i, j;
+
   
   for(;;) {
-    
-  int rowChoice;
-  int columnChoice;
-  
-  cout << "What row? ";
-  cin >> rowChoice;
 
-  cout << "What column? ";
-  cin >> columnChoice;
-  
-  cout << "X or O: ";
-  cin >> arr[rowChoice][columnChoice];
- 
-  
-
-
-  
-    cout << "\nThe 2-D Array is:\n";
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
+  cout << "\nThe Board is:\n";
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 4; j++) {
             cout << "\t" << arr[i][j];
         }
         cout << endl;
     }
+
+    
+  int rowChoice;
+  int columnChoice;
+
+  cout << "What column? ";
+  cin >> columnChoice;
+  
+  cout << "What row? ";
+  cin >> rowChoice;
+  
+  cout << "X or O: ";
+  cin >> arr[rowChoice][columnChoice];
+ 
   }  
   
 
