@@ -37,6 +37,9 @@ using namespace std;
 
 int main() {
 
+  int xWins = 0;
+  int oWins = 0;
+  
   for(;;) {
 
   cout << "Lets play TicTacToe" << endl;
@@ -65,6 +68,7 @@ int main() {
   int columnChoice;
   char currentPlayer;
 
+
   cout << "What column? ";
   cin >> columnChoice;
 
@@ -83,6 +87,21 @@ arr[rowChoice][columnChoice] = currentPlayer;
                 for (j = 0; j < 4; j++) {
                     cout << "\t" << arr[i][j];
                 }
+                
+    /*
+    Scoring doesn't work I don't know what's wrong with it but this is what  I got.
+    if (currentPlayer == 'X' or currentPlayer == 'x') {
+        xWins += 1;
+        cout << xWins;
+        cout << oWins;
+    }             
+    
+    if (currentPlayer == 'O' or currentPlayer == 'o') {
+        oWins += 1;
+        cout << xWins;
+        cout << oWins;
+    }             
+    */
         cout << endl;
     }
         cout << "Player " << currentPlayer << " wins!" << endl;
