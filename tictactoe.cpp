@@ -1,3 +1,16 @@
+/*
+Zach Tobin
+10/2/25
+
+This code represents a 2 Player game of TicTacToe
+
+
+Citations:
+1. Digital Ocean - Helped me learn how to make a 2D array with undefined values.
+   https://www.digitalocean.com/community/tutorials/two-dimensional-array-in-c-plus-plu\s
+*/
+
+
 #include <iostream>
 #include <algorithm>
 #include <cstring>
