@@ -1,0 +1,76 @@
+/*
+Zach Tobin
+10/2/25
+
+This code holds entries for students, where the user can add students first name,
+last name, student id, and GPA. They can also remove the student. And they can print
+all the information of all the students.
+
+
+Citations:
+
+*/
+
+
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+#include <cctype>
+#include <vector>
+
+using namespace std;
+
+struct Student
+{
+    char fn[81] = {'\0'};
+    char ln[81] = {'\0'};
+
+  int id;
+  float gpa;
+};
+
+void addStudent(vector<Student*>& students) {
+  Student* george = new Student;
+  cout << "Please enter first name, last name, ID, and GPA:" << endl;
+        cin >> george ->fn;
+        cin >> george ->ln;
+        cin >> george->id;
+        cin >> george->gpa;
+          
+    students.push_back(george);
+  cout << george->fn << " " << george->ln << " ID: " << george->id << " GPA: " << george->gpa;
+
+}
+
+int main()
+{
+  vector<Student*> students;
+  int choice = 0;
+
+  for(;;){
+
+    cout << "What would you like to do?: " << endl;
+    cout << "1 = Add student " << endl;
+    cout << "2 = Print students " << endl;
+    cout << "3 = Delete student " << endl;
+    cout << "4 = Quit " << endl;
+    
+    cin >> choice;
+
+    if (choice == 1) {
+      addStudent(students);
+    }
+    else if (choice == 2) {
+      cout << "2";
+    }
+    else if (choice == 3) {
+      cout << "3";
+    }
+    else if (choice == 4) {
+        break;
+    }
+
+
+    }
+  return 0;
+}
