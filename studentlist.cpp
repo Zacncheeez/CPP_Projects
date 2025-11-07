@@ -56,9 +56,10 @@ void deleteStudent(vector<Student*>& students) {
     cin >> answer;
     for(int i = 0; i < students.size(); i++) {
         if(students[i]->id == answer)
-            {
+	  {
             cout << "Removed: " << students[i]->fn << " " << students[i]->ln << endl;
-            students.erase(students.begin() + i);
+	    delete students[i];
+	    students.erase(students.begin() + i);
         }
     }
 }
