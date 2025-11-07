@@ -37,6 +37,14 @@ using namespace std;
     if (arr[3][1] == player && arr[2][2] == player && arr[1][3] == player) {
         return true;
     }
+
+    if (arr[1][1] != '.' && arr[1][2] != '.' && arr[1][3] != '.'
+	&& arr[2][1] != '.' && arr[2][2] != '.' && arr[2][3] != '.'
+	&& arr[3][1] != '.' && arr[3][1] != '.' && arr[3][3] != '.') {
+      cout << endl;
+      cout << "Tie game" << endl;
+      return true;
+        }
     
     return false;
   }
@@ -80,7 +88,7 @@ int main() {
 
   cout << "X or O: ";
   cin >> currentPlayer; 
-
+	    
   
     arr[rowChoice][columnChoice] = currentPlayer;
     if (checkWinner(arr, currentPlayer)) {
